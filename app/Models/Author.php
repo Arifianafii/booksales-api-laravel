@@ -9,42 +9,17 @@ class Author extends Model
 {
     use HasFactory;
     
-    protected $fillable = ['name', 'email', 'bio'];
+    protected $fillable = ['name', 'title', 'genres'];
     
     public static function getAllAuthors()
     {
         // Data untuk tabel Author
         return [
-            [
-                'id' => 1,
-                'name' => 'Pramoedya Ananta Toer',
-                'email' => 'pramoedya@example.com',
-                'bio' => 'Penulis Indonesia terkenal dengan Tetralogi Buru'
-            ],
-            [
-                'id' => 2,
-                'name' => 'Andrea Hirata',
-                'email' => 'andrea@example.com',
-                'bio' => 'Penulis novel Laskar Pelangi yang menginspirasi'
-            ],
-            [
-                'id' => 3,
-                'name' => 'Tere Liye',
-                'email' => 'tere@example.com',
-                'bio' => 'Penulis produktif dengan karya-karya best seller'
-            ],
-            [
-                'id' => 4,
-                'name' => 'Dee Lestari',
-                'email' => 'dee@example.com',
-                'bio' => 'Penulis novel Supernova dan Perahu Kertas'
-            ],
-            [
-                'id' => 5,
-                'name' => 'Eka Kurniawan',
-                'email' => 'eka@example.com',
-                'bio' => 'Penulis kontemporer dengan gaya unik'
-            ]
+            ['id' => 1, 'name' => 'J.K. Rowling', 'title' => 'Novelist', 'genres' => 'Fantasy, Mystery'],
+            ['id' => 2, 'name' => 'J.R.R. Tolkien', 'title' => 'Professor', 'genres' => 'Fantasy, Adventure'],
+            ['id' => 3, 'name' => 'George Orwell', 'title' => 'Essayist', 'genres' => 'Dystopia, Political Fiction'],
+            ['id' => 4, 'name' => 'F. Scott Fitzgerald', 'title' => 'Short Story Writer', 'genres' => 'Drama, Romance'],
+            ['id' => 5, 'name' => 'Dan Brown', 'title' => 'Thriller Author', 'genres' => 'Thriller, Mystery'],
         ];
     }
 }

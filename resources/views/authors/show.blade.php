@@ -2,11 +2,11 @@
 
 @section('content')
 <div class="container">
-    <h1>Detail Penulis</h1>
+    <h1>Detail Author</h1>
     <div class="row">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">Informasi Penulis</div>
+                <div class="card-header">Informasi Author</div>
                 <div class="card-body">
                     <table class="table">
                         <tr>
@@ -18,12 +18,12 @@
                             <td>{{ $author['name'] }}</td>
                         </tr>
                         <tr>
-                            <th>Email</th>
-                            <td>{{ $author['email'] }}</td>
+                            <th>Title</th>
+                            <td>{{ $author['title'] }}</td>
                         </tr>
                         <tr>
-                            <th>Biografi</th>
-                            <td>{{ $author['bio'] }}</td>
+                            <th>Genre</th>
+                            <td>{{ $author['genres'] }}</td>
                         </tr>
                     </table>
                     <a href="{{ route('authors.index') }}" class="btn btn-primary">Kembali</a>

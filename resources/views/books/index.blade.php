@@ -2,31 +2,33 @@
 
 @section('content')
 <div class="container">
-    <h1>Daftar Author</h1>
+    <h1>Daftar Buku</h1>
     <div class="row">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">Penulis</div>
+                <div class="card-header">Buku</div>
                 <div class="card-body">
                     <table class="table table-bordered">
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Nama</th>
                                 <th>Title</th>
-                                <th>Genre</th>
+                                <th>Description</th>
+                                <th>Price</th>
+                                <th>Stock</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($authors as $author)
+                            @foreach($books as $book)
                             <tr>
-                                <td>{{ $author['id'] }}</td>
-                                <td>{{ $author['name'] }}</td>
-                                <td>{{ $author['title'] }}</td>
-                                <td>{{ $author['genres'] }}</td>
+                                <td>{{ $book['id'] }}</td>
+                                <td>{{ $book['title'] }}</td>
+                                <td>{{ $book['description'] }}</td>
+                                <td>{{ $book['price'] }}</td>
+                                <td>{{ $book['stock'] }}</td>
                                 <td>
-                                    <a href="{{ route('authors.show', $author['id']) }}" class="btn btn-sm btn-info">Detail</a>
+                                    <a href="{{ route('books.show', $book['id']) }}" class="btn btn-sm btn-info">Detail</a>
                                 </td>
                             </tr>
                             @endforeach

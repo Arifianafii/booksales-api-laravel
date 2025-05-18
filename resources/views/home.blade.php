@@ -11,6 +11,15 @@
             <div class="col-md-6">
                 <div class="card mb-3">
                     <div class="card-body">
+                        <h5 class="card-title">Buku</h5>
+                        <p class="card-text">Lihat daftar buku yang tersedia</p>
+                        <a href="{{ route('books.index') }}" class="btn btn-primary">Lihat Buku</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <div class="card-body">
                         <h5 class="card-title">Genre</h5>
                         <p class="card-text">Lihat daftar genre buku yang tersedia</p>
                         <a href="{{ route('genres.index') }}" class="btn btn-primary">Lihat Genre</a>
@@ -21,8 +30,8 @@
                 <div class="card mb-3">
                     <div class="card-body">
                         <h5 class="card-title">Authors</h5>
-                        <p class="card-text">Lihat daftar penulis buku yang tersedia</p>
-                        <a href="{{ route('authors.index') }}" class="btn btn-primary">Lihat Penulis</a>
+                        <p class="card-text">Lihat daftar author buku yang tersedia</p>
+                        <a href="{{ route('authors.index') }}" class="btn btn-primary">Lihat Author</a>
                     </div>
                 </div>
             </div>
