@@ -7,21 +7,14 @@ use Illuminate\Http\Request;
 
 class BookController extends Controller
 {
-    public function index()
-    {
-        $books = Book::getAllBooks();
-        return view('books.index', compact('books'));
-    }
-    
-    public function show($id)
-    {
-        $books = Book::getAllBooks();
-        $book = collect($books)->firstWhere('id', $id);
-        
-        if (!$book) {
-            abort(404);
-        }
-        
+ public function index() {
+    $books = Book::all();
+
+    return view('books.index', ['books' => $books]);
+ }
+
+ public function show($id) {
+        $book = Book::findOrFail($id);
         return view('books.show', compact('book'));
     }
 }

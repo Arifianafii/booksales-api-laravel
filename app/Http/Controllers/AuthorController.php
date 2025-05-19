@@ -7,21 +7,14 @@ use Illuminate\Http\Request;
 
 class AuthorController extends Controller
 {
-    public function index()
-    {
-        $authors = Author::getAllAuthors();
-        return view('authors.index', compact('authors'));
-    }
-    
-    public function show($id)
-    {
-        $authors = Author::getAllAuthors();
-        $author = collect($authors)->firstWhere('id', $id);
-        
-        if (!$author) {
-            abort(404);
-        }
-        
+ public function index() {
+    $authors = Author::all();
+
+    return view('authors.index', ['authors' => $authors]);
+ }
+
+ public function show($id) {
+        $author = Author::findOrFail($id);
         return view('authors.show', compact('author'));
     }
 }
