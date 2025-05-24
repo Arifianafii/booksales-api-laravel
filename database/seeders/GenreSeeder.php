@@ -14,28 +14,28 @@ class GenreSeeder extends Seeder
     public function run(): void
     {
         Genre::create([
-            'name' => 'Action',
-            'description' => 'Magical worlds and epic adventures.'
+            'name' => 'Fantasy',
+            'description' => 'Magical worlds and epic adventures.',
         ]);
 
         Genre::create([
-            'name' => 'Action',
-            'description' => 'Future tech and space exploration.'
+            'name' => 'Science Fiction',
+            'description' => 'Future tech and space exploration.',
         ]);
 
         Genre::create([
-            'name' => 'Action',
-            'description' => 'Crime-solving and suspense.'
+            'name' => 'Mystery',
+            'description' => 'Crime-solving and suspense.',
         ]);
 
         Genre::create([
-            'name' => 'Action',
-            'description' => 'Love stories and emotions.'
+            'name' => 'Romance',
+            'description' => 'Love stories and emotions.',
         ]);
 
         Genre::create([
-            'name' => 'Action',
-            'description' => 'Scary and supernatural stories.'
+            'name' => 'Horror',
+            'description' => 'Scary and supernatural stories.',
         ]);
     }
 }
