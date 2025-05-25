@@ -18,7 +18,11 @@ class BookSeeder extends Seeder
             'description' => 'Fantasy magic novel',
             'price' => '150000',
             'stock' => '10',
+<<<<<<< HEAD
             'cover_photo' => 'Harrypotter.jpg',
+=======
+            'cover_photo' => 'Harry_potter.jpg',
+>>>>>>> ba6352a56acf224075111c2d03053095babc5e19
             'genre_id' => 1,
             'author_id' => 1,
 
@@ -29,7 +33,11 @@ class BookSeeder extends Seeder
             'description' => 'Adventure in Middle Earth',
             'price' => '120000',
             'stock' => '5',
+<<<<<<< HEAD
             'cover_photo' => 'Thehobbit.jpg',
+=======
+            'cover_photo' => 'The_hobbit.jpg',
+>>>>>>> ba6352a56acf224075111c2d03053095babc5e19
             'genre_id' => 2,
             'author_id' => 2,
         ]);
@@ -49,7 +57,11 @@ class BookSeeder extends Seeder
             'description' => 'American classic',
             'price' => '110000',
             'stock' => '12',
+<<<<<<< HEAD
             'cover_photo' => 'Thegreatgatsby.jpg',
+=======
+            'cover_photo' => 'The_great_gatsby.jpg',
+>>>>>>> ba6352a56acf224075111c2d03053095babc5e19
             'genre_id' => 4,
             'author_id' => 4,
         ]);

@@ -15,6 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('title');
+<<<<<<< HEAD
+=======
+            $table->string('genres_id');
+>>>>>>> ba6352a56acf224075111c2d03053095babc5e19
             $table->timestamps();
         });
     }
