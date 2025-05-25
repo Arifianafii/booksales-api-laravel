@@ -18,6 +18,10 @@ class BookSeeder extends Seeder
             'description' => 'Fantasy magic novel',
             'price' => '150000',
             'stock' => '10',
+            'cover_photo' => 'Harrypotter.jpg',
+            'genre_id' => 1,
+            'author_id' => 1,
+
         ]);
 
         Book::create([
@@ -25,6 +29,9 @@ class BookSeeder extends Seeder
             'description' => 'Adventure in Middle Earth',
             'price' => '120000',
             'stock' => '5',
+            'cover_photo' => 'Thehobbit.jpg',
+            'genre_id' => 2,
+            'author_id' => 2,
         ]);
 
         Book::create([
@@ -32,6 +39,9 @@ class BookSeeder extends Seeder
             'description' => 'Dystopian novel',
             'price' => '130000',
             'stock' => '8',
+            'cover_photo' => '1984.jpg',
+            'genre_id' => 3,
+            'author_id' => 3,
         ]);
 
         Book::create([
@@ -39,6 +49,9 @@ class BookSeeder extends Seeder
             'description' => 'American classic',
             'price' => '110000',
             'stock' => '12',
+            'cover_photo' => 'Thegreatgatsby.jpg',
+            'genre_id' => 4,
+            'author_id' => 4,
         ]);
 
         Book::create([
@@ -46,6 +59,9 @@ class BookSeeder extends Seeder
             'description' => 'Mystery thriller by Dan Brown',
             'price' => '140000',
             'stock' => '6',
+            'cover_photo' => 'Inferno.jpg',
+            'genre_id' => 5,
+            'author_id' => 5,
         ]);
     }
 }

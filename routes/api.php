@@ -16,13 +16,11 @@ Route::get('/user', function (Request $request) {
 // Home Route
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
+Route::apiResource('/books', BookController::class);
+
+
 // Genre Routes
-Route::get('/genres', [GenreController::class, 'index'])->name('genres.index');
-Route::get('/genres/{id}', [GenreController::class, 'show'])->name('genres.show');
+Route::apiResource('/genres', GenreController::class);
 
 // Author Routes
-Route::get('/authors', [AuthorController::class, 'index'])->name('authors.index');
-Route::get('/authors/{id}', [AuthorController::class, 'show'])->name('authors.show');
-
-Route::get('/books', [BookController::class, 'index'])->name('books.index');
-Route::get('/books/{id}', [BookController::class, 'show'])->name('books.show');
+Route::apiResource('/authors', AuthorController::class);

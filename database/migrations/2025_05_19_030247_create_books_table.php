@@ -17,6 +17,9 @@ return new class extends Migration
             $table->string('description');
             $table->string('price', 10, 2);
             $table->string('stock');
+            $table->string('cover_photo');
+            $table->unsignedBigInteger('genre_id');
+            $table->unsignedBigInteger('author_id');
             $table->timestamps();
         });
     }
