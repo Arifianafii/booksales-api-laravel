@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 namespace App\Http\Controllers;
 
@@ -142,7 +142,7 @@ class BookController extends Controller
 
         return response()->json([
             'success' => true,
-            'message' => 'Resource updated successfully!',
+            'message' => 'Resource added successfully!',
             'data' => $book
         ], 200);
     }

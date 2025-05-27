@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Genre;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
 class GenreController extends Controller
@@ -107,7 +106,7 @@ class GenreController extends Controller
 
         return response()->json([
             'success' => true,
-            'message' => 'Resource updated successfully!',
+            'message' => 'Resource added successfully!',
             'data' => $genre
         ], 200);
     }
@@ -130,4 +129,3 @@ class GenreController extends Controller
         ]);
     }
 }
-
