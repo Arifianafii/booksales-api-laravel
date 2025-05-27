@@ -14,19 +14,31 @@ Route::get('/user', function (Request $request) {
 
 
 // Home Route
-Route::get('/', [HomeController::class, 'index'])->name('home');
+// Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/books', [BookController::class, 'index'])->name('books.index');
-Route::get('/books/{id}', [BookController::class, 'show'])->name('books.show');
-Route::post('/books', [BookController::class, 'index'])->name('books.store');
+// Books Route
+Route::apiResource('/books', BookController::class);
 
+// Route::get('/books', [BookController::class, 'index']);
+// Route::post('/books', [BookController::class, 'store']);
+// Route::get('/books/{id}', [BookController::class, 'show']);
+// Route::post('/books/{id}', [BookController::class, 'update']);
+// Route::delete('/books/{id}', [BookController::class, 'destroy']);
 
-// Genre Routes
-Route::get('/genres', [GenreController::class, 'index'])->name('genres.index');
-Route::get('/genres/{id}', [GenreController::class, 'show'])->name('genres.show');
-Route::post('/genres', [GenreController::class, 'index'])->name('genres.store');
+// // Genre Routes
+Route::apiResource('/genres', GenreController::class);
 
-// Author Routes
-Route::get('/authors', [AuthorController::class, 'index'])->name('authors.index');
-Route::get('/authors/{id}', [AuthorController::class, 'show'])->name('authors.show');
-Route::post('/authors', [AuthorController::class, 'index'])->name('authors.store');
+// Route::get('/genres', [GenreController::class, 'index']);
+// Route::post('/genres', [GenreController::class, 'store']);
+// Route::get('/genres/{id}', [GenreController::class, 'show']);
+// Route::post('/genres/{id}', [GenreController::class, 'update']);
+// Route::delete('/genres/{id}', [GenreController::class, 'destroy']);
+
+// // Author Routes
+Route::apiResource('/authors', AuthorController::class);
+
+// Route::get('/authors', [AuthorController::class, 'index']);
+// Route::post('/authors', [AuthorController::class, 'store']);
+// Route::get('/authors/{id}', [AuthorController::class, 'show']);
+// Route::post('/authors/{id}', [AuthorController::class, 'update']);
+// Route::delete('/authors/{id}', [AuthorController::class, 'destroy']);
