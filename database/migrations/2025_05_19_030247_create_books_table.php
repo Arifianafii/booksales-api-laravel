@@ -18,8 +18,10 @@ return new class extends Migration
             $table->string('price', 10, 2);
             $table->string('stock');
             $table->string('cover_photo');
-            $table->unsignedBigInteger('genre_id');
-            $table->unsignedBigInteger('author_id');
+            // $table->unsignedBigInteger('genre_id');
+            // $table->unsignedBigInteger('author_id');
+            $table->foreignId('genre_id')->constrained('genres')->onDelete('cascade');
+            $table->foreignId('author_id')->constrained('authors')->onDelete('cascade');
             $table->timestamps();
         });
     }
